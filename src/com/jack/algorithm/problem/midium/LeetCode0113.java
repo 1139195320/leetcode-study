@@ -34,4 +34,22 @@ public class LeetCode0113 {
         pathSum(node.left, cur, target, new ArrayList<>(path));
         pathSum(node.right, cur, target, new ArrayList<>(path));
     }
+
+    private void pathSum2(TreeNode node, int pre, int target,
+                         List<Integer> path) {
+        if (node == null) {
+            return;
+        }
+        path.add(node.val);
+        int cur = pre + node.val;
+        if (node.left == null && node.right == null) {
+            if (cur == target) {
+                res.add(new ArrayList<>(path));
+            }
+        } else {
+            pathSum2(node.left, cur, target, path);
+            pathSum2(node.right, cur, target, path);
+        }
+        path.remove(path.size() - 1);
+    }
 }
