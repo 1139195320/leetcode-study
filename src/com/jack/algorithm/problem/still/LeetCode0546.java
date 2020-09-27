@@ -26,7 +26,9 @@ public class LeetCode0546 {
         dp[l][r][k] = calculatePoints(boxes, dp, l, r - 1, 0) + (k + 1) * (k + 1);
         for (int i = l; i < r; i++) {
             if (boxes[i] == boxes[r]) {
-                dp[l][r][k] = Math.max(dp[l][r][k], calculatePoints(boxes, dp, l, i, k + 1) + calculatePoints(boxes, dp, i + 1, r - 1, 0));
+                dp[l][r][k] = Math.max(dp[l][r][k],
+                        calculatePoints(boxes, dp, l, i, k + 1) +
+                                calculatePoints(boxes, dp, i + 1, r - 1, 0));
             }
         }
         return dp[l][r][k];

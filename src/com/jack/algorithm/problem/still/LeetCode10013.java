@@ -8,9 +8,9 @@ import java.util.*;
  * hard
  */
 public class LeetCode10013 {
-    int[] dx = {1, -1, 0, 0};
-    int[] dy = {0, 0, 1, -1};
-    int n, m;
+    private int[] dx = {1, -1, 0, 0};
+    private int[] dy = {0, 0, 1, -1};
+    private int n, m;
 
     public int minimalSteps(String[] maze) {
         n = maze.length;

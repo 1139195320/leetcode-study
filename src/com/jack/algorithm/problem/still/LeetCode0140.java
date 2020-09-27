@@ -9,8 +9,9 @@ import java.util.*;
  */
 public class LeetCode0140 {
 
-    private Map<Integer, List<String>> map = new HashMap<>();
+    private Map<Integer, List<String>> map;
     public List<String> wordBreak(String s, List<String> wordDict) {
+        map = new HashMap<>();
         return dfs(s, 0, wordDict);
     }
     private List<String> dfs(String s, int start, List<String> wordDict) {
