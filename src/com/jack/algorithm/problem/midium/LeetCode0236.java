@@ -17,16 +17,22 @@ public class LeetCode0236 {
             return null;
         }
         if (root.val == p.val || root.val == q.val) {
+            // 找到了 p 或 q
             return root;
         }
+        // 递归 left 里面去找 p、q
         TreeNode left = lowestCommonAncestor(root.left, p, q);
+        // 递归 right 里面去找 p、q
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left == null) {
+            // left 里面没有 p 和 q，说明 p、q 都在 right 中
             return right;
         }
         if (right == null) {
+            // right 里面没有 p 和 q，说明 p、q 都在 left 中
             return left;
         }
+        // left 里面找到了一个，right 里面找到了一个
         return root;
     }
 
