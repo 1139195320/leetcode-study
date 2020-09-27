@@ -3,7 +3,7 @@ package com.jack.algorithm.problem.midium;
 import java.util.*;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0199 {
 

@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0056 {
     public int[][] merge(int[][] intervals) {

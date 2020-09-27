@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0046 {
 

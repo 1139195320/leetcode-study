@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0983 {
 

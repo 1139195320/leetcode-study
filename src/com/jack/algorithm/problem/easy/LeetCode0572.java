@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0572 {
 

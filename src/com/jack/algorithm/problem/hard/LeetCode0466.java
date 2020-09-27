@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0466 {
 

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0055 {
 

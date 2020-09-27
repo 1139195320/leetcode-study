@@ -1,7 +1,7 @@
 package com.jack.algorithm.problem.midium;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0005 {
 

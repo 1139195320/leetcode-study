@@ -1,7 +1,7 @@
 package com.jack.algorithm.problem.easy;
 
 /**
- * @author fy
+ * @author jack
  */
 public class LeetCode0235 {
 

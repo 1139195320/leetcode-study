@@ -1,7 +1,7 @@
 package com.jack.algorithm.problem.still;
 
 /**
- * @author fy
+ * @author jack
  * 官方题解
  * hard
  */
