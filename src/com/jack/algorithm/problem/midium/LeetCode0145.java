@@ -24,28 +24,33 @@ public class LeetCode0145 {
             return res;
         }
         Stack<TreeNode> stack = new Stack<>();
-        while (root != null || !stack.empty()) {
+        while (true) {
             if (root != null) {
                 stack.push(root);
-                root = root.left;
+                root = root.right;
             } else {
-                while (!stack.empty() && stack.peek().right == null) {
+                if (stack.isEmpty()) {
+                    break;
+                }
+                if (null == stack.peek().right) {
                     root = stack.pop();
                     res.add(root.val);
-                    if (stack.empty()) {
-                        break;
-                    }
-                    if (root == stack.peek().right) {
-                        res.add(stack.pop().val);
+                    while (root == stack.peek().right) {
+                        res.add(stack.peek().val);
+                        root = stack.pop();
+                        if (stack.isEmpty()) {
+                            break;
+                        }
                     }
                 }
-                if (stack.empty()) {
+                if (stack.isEmpty()) {
                     root = null;
                 } else {
                     root = stack.peek().right;
                 }
             }
         }
+        
         return res;
     }
 
