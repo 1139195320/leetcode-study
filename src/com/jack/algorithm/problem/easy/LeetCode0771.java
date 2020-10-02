@@ -1,5 +1,8 @@
 package com.jack.algorithm.problem.easy;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author jack
  */
@@ -17,6 +20,33 @@ public class LeetCode0771 {
         for (char s : sStr.toCharArray()) {
             if (arr[s - 'A']) {
                 res ++;
+            }
+        }
+        return res;
+    }
+
+    public int doNumJewelsInStones2(String J, String S) {
+        int res = 0;
+        if (J != null && S != null && J.length() > 0 && S.length() > 0) {
+            for (char s : S.toCharArray()) {
+                if (J.indexOf(s) != -1) {
+                    res ++;
+                }
+            }
+        }
+        return res;
+    }
+    public int doNumJewelsInStones3(String J, String S) {
+        int res = 0;
+        if (J != null && S != null && J.length() > 0 && S.length() > 0) {
+            Set<Character> set = new HashSet<>(J.length());
+            for (char j : J.toCharArray()) {
+                set.add(j);
+            }
+            for (char s : S.toCharArray()) {
+                if (set.contains(s)) {
+                    res ++;
+                }
             }
         }
         return res;
