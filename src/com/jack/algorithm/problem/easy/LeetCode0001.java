@@ -8,9 +8,8 @@ import java.util.Map;
  */
 public class LeetCode0001 {
 
-    boolean[]visited;
     public int[] twoSum(int[] nums, int target) {
-        visited = new boolean[nums.length];
+        boolean[]visited = new boolean[nums.length];
         int[] res = new int[2];
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
