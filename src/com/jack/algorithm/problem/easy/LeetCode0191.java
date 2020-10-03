@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0191 {
+public class LeetCode0191 {
 
     public int hammingWeight(int n) {
         // you need treat n as an unsigned value
@@ -21,7 +21,7 @@ public class Easy0191 {
     }
 
     public static void main(String[] args) {
-        Easy0191 main = new Easy0191();
+        LeetCode0191 main = new LeetCode0191();
         System.out.println(main.hammingWeight(11));
         System.out.println(main.hammingWeight2(11));
     }
