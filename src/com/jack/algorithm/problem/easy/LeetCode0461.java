@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0461 {
+public class LeetCode0461 {
 
     public int hammingDistance(int m, int n) {
         m ^= n;
@@ -22,7 +22,7 @@ public class Easy0461 {
     }
 
     public static void main(String[] args) {
-        Easy0461 main = new Easy0461();
+        LeetCode0461 main = new LeetCode0461();
         System.out.println(main.hammingDistance(1, 4));
         System.out.println(main.hammingDistance2(1, 4));
     }

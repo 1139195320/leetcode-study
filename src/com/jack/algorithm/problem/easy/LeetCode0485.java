@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0485 {
+public class LeetCode0485 {
 
     public int findMaxConsecutiveOnes(int[] nums) {
         int res = 0;
@@ -20,6 +20,6 @@ public class Easy0485 {
     }
 
     public static void main(String[] args) {
-        Easy0485 main = new Easy0485();
+        LeetCode0485 main = new LeetCode0485();
     }
 }

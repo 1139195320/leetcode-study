@@ -1,11 +1,14 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0509 {
+public class LeetCode0509 {
 
     public int fib(int N) {
+        if (N == 0) {
+            return 0;
+        }
         int[] dp = new int[N + 1];
         dp[1] = 1;
         for (int i = 2; i <= N; i++) {
@@ -15,6 +18,6 @@ public class Easy0509 {
     }
 
     public static void main(String[] args) {
-        Easy0509 main = new Easy0509();
+        LeetCode0509 main = new LeetCode0509();
     }
 }
