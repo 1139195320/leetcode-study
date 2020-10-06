@@ -1,12 +1,11 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.midium;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author jack
  */
-public class Medium11715 {
+public class LeetCode11715 {
 
     private static class TrieTree {
         TrieTree[] childArr;
@@ -41,7 +40,14 @@ public class Medium11715 {
                 set.add(word);
             }
         }
-        return set.isEmpty() ? "" : set.iterator().next();
+        List<String> res = new ArrayList<>(set);
+        res.sort((a, b) -> {
+            if (a.length() == b.length()) {
+                return a.compareTo(b);
+            }
+            return a.length() > b.length() ? -1 : 1;
+        });
+        return set.isEmpty() ? "" : res.get(0);
     }
     private boolean dfs(TrieTree root, char[] arr, int start) {
         TrieTree tree = root;
@@ -60,9 +66,12 @@ public class Medium11715 {
     }
 
     public static void main(String[] args) {
-        Medium11715 main = new Medium11715();
+        LeetCode11715 main = new LeetCode11715();
         System.out.println(main.longestWord(
                 new String[]{"cat", "banana", "dog", "nana", "walk", "walker", "dogwalker"}
+        ));
+        System.out.println(main.longestWord(
+                new String[]{"aaa", "aaaa", "a", "aaaaa", "aa", "aaaaaa"}
         ));
     }
 }
