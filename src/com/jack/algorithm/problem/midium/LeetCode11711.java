@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.midium;
 
 /**
  * @author jack
  */
-public class Medium11711 {
+public class LeetCode11711 {
 
     public int findClosest(String[] words, String word1, String word2) {
         int res = Integer.MAX_VALUE;
@@ -52,7 +52,7 @@ public class Medium11711 {
     }
 
     public static void main(String[] args) {
-        Medium11711 main = new Medium11711();
+        LeetCode11711 main = new LeetCode11711();
         System.out.println(main.findClosest(
                 new String[] {
                         "I","am","a","student","from","a","university","in","a","city"

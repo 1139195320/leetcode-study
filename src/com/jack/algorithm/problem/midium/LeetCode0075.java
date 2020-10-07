@@ -8,6 +8,9 @@ import java.util.Arrays;
 public class LeetCode0075 {
 
     public void sortColors(int[] nums) {
+        // 法一：直接排序
+        // 法二：遍历一次计数，遍历第二次重新写入
+        // 法三：
         int l = 0;
         int r = nums.length - 1;
         int i = 0;

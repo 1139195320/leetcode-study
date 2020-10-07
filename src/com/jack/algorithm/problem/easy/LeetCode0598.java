@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0598 {
+public class LeetCode0598 {
 
     public int maxCount(int m, int n, int[][] ops) {
         int a = m;
@@ -16,6 +16,6 @@ public class Easy0598 {
     }
 
     public static void main(String[] args) {
-        Easy0598 main = new Easy0598();
+        LeetCode0598 main = new LeetCode0598();
     }
 }

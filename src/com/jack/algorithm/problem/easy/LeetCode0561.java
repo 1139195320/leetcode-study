@@ -1,11 +1,11 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 import java.util.Arrays;
 
 /**
  * @author jack
  */
-public class Easy0561 {
+public class LeetCode0561 {
 
     public int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
@@ -18,6 +18,6 @@ public class Easy0561 {
     }
 
     public static void main(String[] args) {
-        Easy0561 main = new Easy0561();
+        LeetCode0561 main = new LeetCode0561();
     }
 }
