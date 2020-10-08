@@ -1,12 +1,12 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.midium;
 
 /**
  * @author jack
  */
-public class Easy0633 {
+public class LeetCode0633 {
 
     public boolean judgeSquareSum(int c) {
-        for (int a = 0; a * a <= c; a++) {
+        for (long a = 0; a * a <= c; a++) {
             double b = Math.sqrt(c - a * a);
             if (b == (int) b) {
                 return true;
@@ -16,7 +16,7 @@ public class Easy0633 {
     }
 
     public static void main(String[] args) {
-        Easy0633 main = new Easy0633();
+        LeetCode0633 main = new LeetCode0633();
         System.out.println(main.judgeSquareSum(5));
         System.out.println(main.judgeSquareSum(6));
     }

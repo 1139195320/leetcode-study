@@ -1,11 +1,11 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 import java.util.*;
 
 /**
  * @author jack
  */
-public class Easy0653 {
+public class LeetCode0653 {
 
     private static class TreeNode {
         int val;
@@ -87,8 +87,40 @@ public class Easy0653 {
         return false;
     }
 
+    public boolean findTarget2(TreeNode root, int k) {
+        return find(root, k, new HashSet<>());
+    }
+    private boolean find(TreeNode root, int k, Set<Integer> set) {
+        if (root == null) {
+            return false;
+        }
+        if (set.contains(k - root.val)) {
+            return true;
+        }
+        set.add(root.val);
+        return find(root.left, k, set) || find(root.right, k, set);
+    }
+
+    public boolean findTarget3(TreeNode root, int k) {
+        Set<Integer> set = new HashSet<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.remove();
+            if (node != null) {
+                if (set.contains(k - node.val)) {
+                    return true;
+                }
+                set.add(node.val);
+                queue.add(node.left);
+                queue.add(node.right);
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-        Easy0653 main = new Easy0653();
+        LeetCode0653 main = new LeetCode0653();
         System.out.println(main.findTarget(
                 main.getNode("5,3,6,2,4,#,7,#,#,#,#,#,#"), 9
         ));
