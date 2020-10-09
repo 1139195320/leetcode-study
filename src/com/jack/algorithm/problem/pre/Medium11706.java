@@ -8,43 +8,27 @@ import java.util.Arrays;
 public class Medium11706 {
 
     public int numberOf2sInRange(int n) {
-        String str = n + "";
-        char[] arr = str.toCharArray();
-        int len = arr.length;
-        int[] dp = new int[len];
-        int i = 0;
-        if (arr[len - 1 - i] >= '2') {
-            dp[i] = 1;
+        if (n <= 1) {
+            return 0;
         }
-        int pre = arr[len - 1 - i] - '0';
-        i ++;
-        while (i < len) {
-            int pos = i + 1;
-            int cur = arr[len - 1 - i] - '0';
-            int preMultiple = getMultiple(pos - 1);
-            int multiple = getMultiple(pos);
-            if (cur < 2) {
-                dp[i] = cur * preMultiple + dp[i - 1];
+        int digit = (int) Math.log10(n) + 1;
+        int [][] dp = new int[digit + 1][2];
+        // dp[i][0] = numberOf2sInRange(n % pow(10, i)) 保存0~n的1-i位组成的数包含2的个数
+        // dp[i][1] = numberOf2sInRange(99..9) 保存i位均为9包含2的个数
+        dp[1][0] = n % 10 >= 2 ? 1 : 0;
+        dp[1][1] = 1;
+        for (int i = 2; i <= digit; i++) {
+            int k = n / ((int) Math.pow(10, i - 1)) % 10;
+            dp[i][0] = k * dp[i - 1][1] + dp[i - 1][0];
+            if (k == 2) {
+                dp[i][0] += n % (int) Math.pow(10, i - 1) + 1;
+            } else if (k > 2) {
+                dp[i][0] += (int) Math.pow(10, i - 1);
             }
-            else if (cur == 2) {
-                dp[i] = cur * preMultiple + (pre + 1) + dp[i - 1];
-            }
-            else {
-                dp[i] = cur * preMultiple + multiple / (pos) + dp[i - 1];
-            }
-            pre = pre * 10 + cur;
-            i ++;
+            // 计算当 i - 1 位均为 9 时的值包含 2 的个数
+            dp[i][1] = 10 * dp[i - 1][1] + (int) Math.pow(10, i - 1);
         }
-        System.out.println(Arrays.toString(dp));
-        return dp[i - 1];
-    }
-    private int getMultiple(int i) {
-        int multiple = i;
-        while (i > 1) {
-            multiple *= 10;
-            i --;
-        }
-        return multiple;
+        return dp[digit][0];
     }
 
     public static void main(String[] args) {

@@ -1,11 +1,11 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.midium;
 
 import java.util.*;
 
 /**
  * @author jack
  */
-public class Medium11622 {
+public class LeetCode11622 {
 
     public List<String> printKMoves(int K) {
         List<String> res = new ArrayList<>();
@@ -87,7 +87,7 @@ public class Medium11622 {
     }
 
     public static void main(String[] args) {
-        Medium11622 main = new Medium11622();
+        LeetCode11622 main = new LeetCode11622();
         System.out.println(main.printKMoves(0));
         System.out.println(main.printKMoves(2));
         System.out.println(main.printKMoves(5));
