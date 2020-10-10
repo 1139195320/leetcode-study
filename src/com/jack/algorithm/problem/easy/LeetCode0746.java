@@ -1,9 +1,9 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 /**
  * @author jack
  */
-public class Easy0746 {
+public class LeetCode0746 {
 
     public int minCostClimbingStairs(int[] cost) {
         int len = cost.length;
@@ -20,7 +20,7 @@ public class Easy0746 {
     }
 
     public static void main(String[] args) {
-        Easy0746 main = new Easy0746();
+        LeetCode0746 main = new LeetCode0746();
         System.out.println(main.minCostClimbingStairs(
                 new int[] {10, 15, 20, 1, 10, 25}
         ));

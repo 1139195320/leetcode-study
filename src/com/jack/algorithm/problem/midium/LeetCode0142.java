@@ -1,7 +1,9 @@
 package com.jack.algorithm.problem.midium;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author jack
@@ -19,13 +21,34 @@ public class LeetCode0142 {
             return null;
         }
         ListNode cur = head;
-        List<ListNode> list = new ArrayList<>();
+        Set<ListNode> set = new HashSet<>();
         while (cur != null) {
-            if (list.contains(cur)) {
+            if (set.contains(cur)) {
                 return cur;
             }
-            list.add(cur);
+            set.add(cur);
             cur = cur.next;
+        }
+        return null;
+    }
+
+    public ListNode detectCycle2(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null) {
+            slow = slow.next;
+            if (fast.next != null) {
+                fast = fast.next.next;
+            } else {
+                return null;
+            }
+            if (fast == slow) {
+                ListNode parNode = head;
+                while (parNode != slow) {
+                    parNode = parNode.next;
+                    slow = slow.next;
+                }
+                return parNode;
+            }
         }
         return null;
     }

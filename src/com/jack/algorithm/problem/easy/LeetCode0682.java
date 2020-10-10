@@ -1,11 +1,11 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 import java.util.Stack;
 
 /**
  * @author jack
  */
-public class Easy0682 {
+public class LeetCode0682 {
 
     public int calPoints(String[] ops) {
         int res = 0;
@@ -32,7 +32,7 @@ public class Easy0682 {
     }
 
     public static void main(String[] args) {
-        Easy0682 main = new Easy0682();
+        LeetCode0682 main = new LeetCode0682();
         System.out.println(main.calPoints(
                 new String[]{"5", "2", "C", "D", "+"}
         ));

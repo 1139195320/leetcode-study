@@ -1,4 +1,4 @@
-package com.jack.algorithm.problem.pre;
+package com.jack.algorithm.problem.easy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author jack
  */
-public class Easy0728 {
+public class LeetCode0728 {
 
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> res = new ArrayList<>();
@@ -33,7 +33,7 @@ public class Easy0728 {
     }
 
     public static void main(String[] args) {
-        Easy0728 main = new Easy0728();
+        LeetCode0728 main = new LeetCode0728();
         System.out.println(main.selfDividingNumbers(1, 22));
     }
 }

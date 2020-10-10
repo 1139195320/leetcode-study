@@ -1,7 +1,5 @@
 package com.jack.algorithm.problem.pre;
 
-import java.util.Arrays;
-
 /**
  * @author jack
  */
