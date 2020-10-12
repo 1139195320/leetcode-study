@@ -15,6 +15,7 @@ public class LeetCode0530 {
     private int pre, res;
     public int getMinimumDifference(TreeNode root) {
         res = Integer.MAX_VALUE;
+        pre = -1;
         dfs(root);
         return res;
     }
