@@ -45,4 +45,31 @@ public class LeetCode0024 {
         // LeetCode0025 的简易版
         return null;
     }
+
+
+    public ListNode swapPairs2(ListNode head) {
+        boolean tag = false;
+        int pre = -1;
+        ListNode preNode = head;
+        ListNode cur = head;
+        while (cur != null) {
+            if (!tag) {
+                pre = cur.val;
+                preNode = cur;
+                tag = true;
+            } else {
+                preNode.val = cur.val;
+                cur.val = pre;
+                tag = false;
+            }
+            cur = cur.next;
+        }
+        return head;
+    }
+
+    public static void main(String[] args) {
+        LeetCode0024 main = new LeetCode0024();
+        System.out.println(main.swapPairs2(new ListNode(1, 2, 3, 4)));
+        System.out.println(main.swapPairs2(new ListNode(1, 2, 3, 4, 5)));
+    }
 }
