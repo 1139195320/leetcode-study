@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class LeetCode1002 {
 
-    public List<String> commonChars(List<String> list) {
+    public List<String> commonChars(String[] src) {
         List<String> res = new ArrayList<>();
-        int n = list.size();
+        int n = src.length;
         if (n == 0) {
             return res;
         }
@@ -20,7 +20,7 @@ public class LeetCode1002 {
         Arrays.fill(arr, -1);
         int[][] tmp = new int[n][max];
         for (int i = 0; i < n; i++) {
-            String cur = list.get(i);
+            String cur = src[i];
             for (char c : cur.toCharArray()) {
                 tmp[i][c - 'a'] ++;
             }
@@ -43,10 +43,10 @@ public class LeetCode1002 {
     public static void main(String[] args) {
         LeetCode1002 main = new LeetCode1002();
         System.out.println(main.commonChars(
-                Arrays.asList("bella","label","roller")
+                new String[]{"bella","label","roller"}
         ));
         System.out.println(main.commonChars(
-                Arrays.asList("cool","lock","cook")
+                new String[]{"cool","lock","cook"}
         ));
     }
 }
