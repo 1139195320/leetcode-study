@@ -18,7 +18,8 @@ public class LeetCode0844 {
         if (stackS.size() != stackT.size()) {
             return false;
         }
-        for (int i = 0; i < stackS.size(); i++) {
+        int size = stackS.size();
+        for (int i = 0; i < size; i++) {
             if (!stackS.pop().equals(stackT.pop())) {
                 return false;
             }
