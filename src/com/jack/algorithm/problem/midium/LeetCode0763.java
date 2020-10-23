@@ -24,9 +24,7 @@ public class LeetCode0763 {
             Character c = arr[i];
             cArr[c - 'a'] --;
             if (cArr[c - 'a'] == 0) {
-                if (curSet.contains(c)) {
-                    curSet.remove(c);
-                }
+                curSet.remove(c);
                 if (curSet.size() == 0) {
                     res.add(i - pre + 1);
                     pre = i + 1;
