@@ -9,19 +9,17 @@ public class LeetCode0144 {
 
     public List<Integer> preorderTraversal(TreeNode root) {
         // 前序 -> 中-左-右
-        List<Integer> res = new ArrayList<>();
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            TreeNode cur = queue.remove();
-            if (cur == null) {
-                res.add(null);
-            } else {
-                res.add(cur.val);
-                queue.add(cur.left);
-                queue.add(cur.right);
+        Stack<TreeNode> stack = new Stack<>();
+        List<Integer> list = new ArrayList<>();
+        while (!stack.empty() || root != null) {
+            while (root != null) {
+                list.add(root.val);
+                stack.add(root);
+                root = root.left;
             }
+            root = stack.pop();
+            root = root.right;
         }
-        return res;
+        return list;
     }
 }
